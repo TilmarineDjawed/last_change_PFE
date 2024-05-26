@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".absenceprofadmin"
+    android:background="#ebebf9">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/headerparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="164dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="ABSENCE/RETARD"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Bouton de retour"
+        android:background="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/mainlinearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        >
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollViewclass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:id="@+id/btnlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonmatiere1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/btnstule"
+                    android:text="math"
+                    android:textColor="#1261A0"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonmatier2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/btnstule"
+                    android:text="physique"
+                    android:textColor="#1261A0"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonmatier3"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/btnstule"
+                    android:text="science"
+                    android:textColor="#1261A0"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonmatier4"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/btnstule"
+                    android:text="arabic"
+                    android:textColor="#1261A0"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonmatier5"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/btnstule"
+                    android:text="french"
+                    android:textColor="#1261A0"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonmatier6"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/btnstule"
+                    android:text="english"
+                    android:textColor="#1261A0"
+                    android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonmatier7"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/btnstule"
+                    android:text="islamic"
+                    android:textColor="#1261A0"
+                    android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonmatier8"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/btnstule"
+                    android:text="art"
+                    android:textColor="#1261A0"
+                    android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonmatier9"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/btnstule"
+                    android:text="sport"
+                    android:textColor="#1261A0"
+                    android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonmatier10"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/btnstule"
+                    android:text="histoir/geo"
+                    android:textColor="#1261A0"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/contributeCard3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.144"
+            android:elevation="12dp"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/scrollView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:fillViewport="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/mainlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <LinearLayout
+
+                            android:id="@+id/layout2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:weightSum="5"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <TextView
+                                android:id="@+id/proftxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_gravity="left"
+                                android:text="prof"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof1txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof1"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof2txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof2"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof3txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 3"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof4txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 4"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof5txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 5"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof6txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 6"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof7txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof7"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/prof8txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 8"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof9txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof9"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof10txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof10"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof11txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 11"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof12txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 12"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof13txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 13"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof14txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 14"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof15txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof15"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/prof16txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 16"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof17txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 17"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof18txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 18"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof19txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 19"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof20txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 20"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof21txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 21"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof22txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 22"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof23txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 23"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/prof24txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 24"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof25txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+
+                                android:text="prof25"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof26txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 26"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof27txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 27"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof28txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 28"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof29txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 29"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof30txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 30"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/prof31txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 31"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/prof32txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="prof 32"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/layoutabsenceretard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical"
+                            android:weightSum="5"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <TextView
+                                android:id="@+id/absenceretardnaissancetxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_gravity="left|center"
+                                android:gravity="center"
+                                android:text="type"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard1txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 1"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard2txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 2"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard3txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 3"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard4txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 4"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard5txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 5"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard6txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 6"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard7txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 7"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/absenceretard8txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 8"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard9txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 9"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard10txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 10"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard11txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 11"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard12txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 12"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard13txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 13"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard14txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 14"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard15txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absencereatrd 15"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/absenceretard16txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 1"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard17txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 17"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard18txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 18"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard19txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 19"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard20txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 20"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard21txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 21"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard22txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 22"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard23txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 23"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/absenceretard24txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 24"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard25txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 25"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard26txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 26"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard27txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 27"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard28txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 28"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard29txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 29"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard30txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 30"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/absenceretard31txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 31"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/absenceretard32txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="absenceretard 32"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical"
+                            android:weightSum="5"
+                            >
+
+
+                            <TextView
+                                android:id="@+id/datenaissancetxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_gravity="left"
+                                android:gravity="center"
+                                android:text="date"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date1txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 1"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date2txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 2"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date3txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 3"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date4txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 4"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date5txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 5"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date6txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 6"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date7txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 7"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/date8txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 8"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date9txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 9"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date10txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 10"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date11txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 11"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date12txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 12"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date13txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 13"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date14txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 14"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date15txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 15"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/date16txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 1"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date17txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 17"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date18txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 18"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date19txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 19"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date20txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 20"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date21txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 21"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date22txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 22"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date23txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 23"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/date24txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 24"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date25txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 25"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date26txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 26"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date27txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 27"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date28txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 28"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date29txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 29"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date30txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 30"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/date31txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 31"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/date32txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center"
+                                android:text="date 32"                            android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
