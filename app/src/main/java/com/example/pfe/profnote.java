@@ -41,14 +41,14 @@ public class profnote extends Fragment {
 
     private void setUpEditTextListeners(View view) {
         int[] editTextIds = {
-                R.id.etudiant1txt, R.id.etudiant1coef, R.id.etudiant1cc1, R.id.etudiant1cc2, R.id.etudiant1exam,
-                R.id.etudiant2txt, R.id.etudiant2coef, R.id.etudiant2cc1, R.id.etudiant2cc2, R.id.etudiant2exam,
-                R.id.etudiant3txt, R.id.etudiant3coef, R.id.etudiant3cc1, R.id.etudiant3cc2, R.id.etudiant3exam,
-                R.id.etudiant4txt, R.id.etudiant4coef, R.id.etudiant4cc1, R.id.etudiant4cc2, R.id.etudiant4exam,
-                R.id.etudiant5txt, R.id.etudiant5coef, R.id.etudiant5cc1, R.id.etudiant5cc2, R.id.etudiant5exam,
-                R.id.etudiant6txt, R.id.etudiant6coef, R.id.etudiant6cc1, R.id.etudiant6cc2, R.id.etudiant6exam,
-                R.id.etudiant7txt, R.id.etudiant7coef, R.id.etudiant7cc1, R.id.etudiant7cc2, R.id.etudiant7exam,
-                R.id.etudiant8txt, R.id.etudiant8coef, R.id.etudiant8cc1, R.id.etudiant8cc2, R.id.etudiant8exam
+                R.id.etudiant1txt, R.id.etudiant1cc1, R.id.etudiant1cc2, R.id.etudiant1exam,
+                R.id.etudiant2txt,  R.id.etudiant2cc1, R.id.etudiant2cc2, R.id.etudiant2exam,
+                R.id.etudiant3txt,  R.id.etudiant3cc1, R.id.etudiant3cc2, R.id.etudiant3exam,
+                R.id.etudiant4txt,  R.id.etudiant4cc1, R.id.etudiant4cc2, R.id.etudiant4exam,
+                R.id.etudiant5txt,  R.id.etudiant5cc1, R.id.etudiant5cc2, R.id.etudiant5exam,
+                R.id.etudiant6txt,  R.id.etudiant6cc1, R.id.etudiant6cc2, R.id.etudiant6exam,
+                R.id.etudiant7txt, R.id.etudiant7cc1, R.id.etudiant7cc2, R.id.etudiant7exam,
+                R.id.etudiant8txt,  R.id.etudiant8cc1, R.id.etudiant8cc2, R.id.etudiant8exam
         };
 
         for (int id : editTextIds) {

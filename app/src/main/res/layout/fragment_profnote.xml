@@ -17,6 +17,99 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profilcardparent"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_margin="6dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:elevation="12dp"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@android:color/transparent"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.7">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/profilimg"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/teacher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nomtxt"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="left"
+                android:text="Nom: benkadour"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/profilimg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.158" />
+
+            <TextView
+                android:id="@+id/prenomtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="left"
+                android:text="prenom : ali"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/profilimg"
+                app:layout_constraintTop_toBottomOf="@+id/nomtxt"
+                app:layout_constraintVertical_bias="0.10" />
+
+            <TextView
+                android:id="@+id/niveautxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="left"
+                android:text="matière : MATH"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/profilimg"
+                app:layout_constraintTop_toBottomOf="@+id/prenomtxt"
+                app:layout_constraintVertical_bias="0.2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/EditText"
@@ -190,16 +283,7 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/coeftxt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_marginStart="50dp"
-                        android:text="Coef"
-                        android:textAllCaps="true"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+
 
                     <TextView
                         android:id="@+id/cc1txt"
@@ -264,19 +348,7 @@
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/etudiant1coef"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="0.0"
-                        android:textAllCaps="true"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+
 
                     <EditText
                         android:id="@+id/etudiant1cc1"
@@ -359,19 +431,7 @@
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/etudiant2coef"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="0.0"
-                        android:textAllCaps="true"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+
 
                     <EditText
                         android:id="@+id/etudiant2cc1"
@@ -456,19 +516,7 @@
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/etudiant3coef"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="0.0"
-                        android:textAllCaps="true"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+
 
                     <EditText
                         android:id="@+id/etudiant3cc1"
@@ -543,25 +591,13 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="etudiant3"
+                        android:text="etudiant4"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/etudiant4coef"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="0.0"
-                        android:textAllCaps="true"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+
 
                     <EditText
                         android:id="@+id/etudiant4cc1"
@@ -632,39 +668,28 @@
                     app:layout_constraintVertical_bias="0.275">
                     <EditText
                         android:id="@+id/etudiant5txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="etudiant 5"
+                        android:text="etudiant5"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
-                    <EditText
-                        android:id="@+id/etudiant5coef"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_marginStart="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="0.0"
-                        android:textAllCaps="true"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
                         android:textStyle="bold" />
+
+
 
                     <EditText
                         android:id="@+id/etudiant5cc1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_marginStart="40dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="40dp"
                         android:layout_marginBottom="10dp"
-                        android:gravity="left"
                         android:text="0.0"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
@@ -673,10 +698,11 @@
 
                     <EditText
                         android:id="@+id/etudiant5cc2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="50dp"
                         android:layout_marginBottom="10dp"
                         android:text="0.0"
                         android:textAllCaps="true"
@@ -686,8 +712,10 @@
 
                     <EditText
                         android:id="@+id/etudiant5exam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="0.0"
@@ -722,39 +750,28 @@
                     app:layout_constraintVertical_bias="0.275">
                     <EditText
                         android:id="@+id/etudiant6txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="etudiant 6"
+                        android:text="etudiant6"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
-                    <EditText
-                    android:id="@+id/etudiant6coef"
-                    android:layout_width="wrap_content"
-                    android:layout_height="21dp"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="0.0"
-                    android:textAllCaps="true"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                        android:textStyle="bold" />
+
+
 
                     <EditText
                         android:id="@+id/etudiant6cc1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_marginStart="40dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="40dp"
                         android:layout_marginBottom="10dp"
-                        android:gravity="left"
                         android:text="0.0"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
@@ -763,10 +780,11 @@
 
                     <EditText
                         android:id="@+id/etudiant6cc2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="50dp"
                         android:layout_marginBottom="10dp"
                         android:text="0.0"
                         android:textAllCaps="true"
@@ -776,8 +794,10 @@
 
                     <EditText
                         android:id="@+id/etudiant6exam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="0.0"
@@ -812,8 +832,9 @@
                     app:layout_constraintVertical_bias="0.275">
                     <EditText
                         android:id="@+id/etudiant7txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
@@ -821,30 +842,18 @@
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
-                    <EditText
-                        android:id="@+id/etudiant7coef"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_marginStart="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="0.0"
-                        android:textAllCaps="true"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
                         android:textStyle="bold" />
+
+
 
                     <EditText
                         android:id="@+id/etudiant7cc1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_marginStart="40dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="40dp"
                         android:layout_marginBottom="10dp"
-                        android:gravity="left"
                         android:text="0.0"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
@@ -853,10 +862,11 @@
 
                     <EditText
                         android:id="@+id/etudiant7cc2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="50dp"
                         android:layout_marginBottom="10dp"
                         android:text="0.0"
                         android:textAllCaps="true"
@@ -866,8 +876,10 @@
 
                     <EditText
                         android:id="@+id/etudiant7exam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="0.0"
@@ -901,39 +913,28 @@
                     app:layout_constraintVertical_bias="0.275">
                     <EditText
                         android:id="@+id/etudiant8txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginBottom="50dp"
-                        android:text="etudiant 8"
+                        android:layout_marginBottom="10dp"
+                        android:text="etudiant8"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
-                    <EditText
-                        android:id="@+id/etudiant8coef"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_marginStart="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="0.0"
-                        android:textAllCaps="true"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
                         android:textStyle="bold" />
+
+
 
                     <EditText
                         android:id="@+id/etudiant8cc1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_marginStart="40dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="40dp"
                         android:layout_marginBottom="10dp"
-                        android:gravity="left"
                         android:text="0.0"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
@@ -942,10 +943,11 @@
 
                     <EditText
                         android:id="@+id/etudiant8cc2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="50dp"
                         android:layout_marginBottom="10dp"
                         android:text="0.0"
                         android:textAllCaps="true"
@@ -955,8 +957,10 @@
 
                     <EditText
                         android:id="@+id/etudiant8exam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="0.0"
@@ -976,7 +980,7 @@
         android:layout_gravity="left"
         android:layout_marginBottom="10dp"
         android:background="@drawable/btnstule"
-        android:text="send"
+        android:text="envoyer"
         android:textSize="21sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

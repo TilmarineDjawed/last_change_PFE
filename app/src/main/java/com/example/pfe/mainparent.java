@@ -73,9 +73,7 @@ public class mainparent extends AppCompatActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_profil) {
-            Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_changerprofil) {
+         if (id == R.id.nav_changerprofil) {
             Intent intent = new Intent(this, choixprofil.class);
             startActivity(intent);
             finish();

@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-
+import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -19,8 +19,10 @@ import androidx.fragment.app.Fragment;
 public class cahiercharge extends Fragment {
 
     ImageButton back;
-    CardView contributeCard3;
     ConstraintLayout parentLayout;
+    LinearLayout cardContainer;
+    CardView contributeCard;
+    TextView dateTextView, courTextView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,33 +32,30 @@ public class cahiercharge extends Fragment {
 
         // Find the back button and other views after inflating the layout
         back = view.findViewById(R.id.back);
-        contributeCard3 = view.findViewById(R.id.contributeCard);
         parentLayout = view.findViewById(R.id.constraintLayout);
+        cardContainer = view.findViewById(R.id.cardContainer);
+        contributeCard = view.findViewById(R.id.contributeCard);
+        dateTextView = contributeCard.findViewById(R.id.date);
+        courTextView = contributeCard.findViewById(R.id.cour);
 
         // Set an onClickListener for the back button
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Use getActivity() as the context for the Intent
-                Intent intent = new Intent(getActivity(), mainprof.class);
-                startActivity(intent);
-            }
+        back.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), mainprof.class);
+            startActivity(intent);
         });
 
-        // Set an onClickListener for the contributeCard3
-        contributeCard3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showExerciseDialog();
-            }
-        });
+        // Set an onClickListener for the contributeCard
+        contributeCard.setOnClickListener(v -> showExerciseDialog(dateTextView, courTextView));
+
+        // Set an onClickListener for the add button
+        view.findViewById(R.id.addButton).setOnClickListener(v -> addNewCard());
 
         return view;
     }
 
-    private void showExerciseDialog() {
+    private void showExerciseDialog(TextView dateTextView, TextView courTextView) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("Exercices à faire");
+        builder.setTitle("");
 
         // Create a LinearLayout to hold the EditText views
         LinearLayout layout = new LinearLayout(getActivity());
@@ -65,34 +64,40 @@ public class cahiercharge extends Fragment {
         // Add an input field for the date
         final EditText dateInput = new EditText(getActivity());
         dateInput.setHint("Date");
-        dateInput.setInputType(InputType.TYPE_CLASS_DATETIME);
+        dateInput.setInputType(InputType.TYPE_CLASS_TEXT);
         layout.addView(dateInput);
 
         // Add an input field for the exercises
         final EditText exercisesInput = new EditText(getActivity());
-        exercisesInput.setHint("Exercices à faire");
+        exercisesInput.setHint("les cours");
         exercisesInput.setInputType(InputType.TYPE_CLASS_TEXT);
         layout.addView(exercisesInput);
 
         builder.setView(layout);
 
-        builder.setPositiveButton("Envoyer", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Retrieve the entered text and send the exercises
-                String date = dateInput.getText().toString();
-                String exercises = exercisesInput.getText().toString();
-                // Send the exercises here (implement this part)
-            }
+        builder.setPositiveButton("Envoyer", (dialog, which) -> {
+            String date = dateInput.getText().toString();
+            String exercises = exercisesInput.getText().toString();
+
+            // Update the clicked card's TextViews
+            dateTextView.setText(date);
+            courTextView.setText(exercises);
         });
 
-        builder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
+        builder.setNegativeButton("Annuler", (dialog, which) -> dialog.cancel());
 
         builder.show();
+    }
+
+    private void addNewCard() {
+        CardView newCard = (CardView) LayoutInflater.from(getActivity())
+                .inflate(R.layout.card_layout, cardContainer, false);
+
+        TextView newDateTextView = newCard.findViewById(R.id.date);
+        TextView newCourTextView = newCard.findViewById(R.id.cour);
+
+        newCard.setOnClickListener(v -> showExerciseDialog(newDateTextView, newCourTextView));
+
+        cardContainer.addView(newCard);
     }
 }

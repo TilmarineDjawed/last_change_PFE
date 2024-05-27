@@ -11,7 +11,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="200dp"
         android:background="@drawable/headerparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,10 +19,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="190dp"
+        android:layout_width="264dp"
         android:layout_height="60dp"
         android:gravity="center"
-        android:text="CONVOCATION AVERTISSEMENT"
+        android:text="CONVOCATION "
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +42,100 @@
         android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profilcardparent"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_margin="6dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:elevation="12dp"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@android:color/transparent"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.7">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/profilimg"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/teacher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nomtxt"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="left"
+                android:text="Nom: benkadour"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/profilimg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.158" />
+
+            <TextView
+                android:id="@+id/prenomtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="left"
+                android:text="prenom : ali"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/profilimg"
+                app:layout_constraintTop_toBottomOf="@+id/nomtxt"
+                app:layout_constraintVertical_bias="0.10" />
+
+            <TextView
+                android:id="@+id/niveautxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="left"
+                android:text="matière : MATH"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/profilimg"
+                app:layout_constraintTop_toBottomOf="@+id/prenomtxt"
+                app:layout_constraintVertical_bias="0.2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -136,13 +230,14 @@
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ebebf9"
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        >
 
 
         <androidx.cardview.widget.CardView
@@ -213,30 +308,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant1"
+                            <TextView
+                                android:id="@+id/convoqueretudiant1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -286,30 +367,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant2"
+                            <TextView
+                                android:id="@+id/convoqueretudiant2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -359,30 +426,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant3"
+                            <TextView
+                                android:id="@+id/convoqueretudiant3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -432,30 +485,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant4"
+                            <TextView
+                                android:id="@+id/convoqueretudiant4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -505,30 +544,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant5"
+                            <TextView
+                                android:id="@+id/convoqueretudiant5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -578,30 +603,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant6"
+                            <TextView
+                                android:id="@+id/convoqueretudiant6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -651,30 +662,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant7"
+                            <TextView
+                                android:id="@+id/convoqueretudiant7"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -724,30 +721,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant8"
+                            <TextView
+                                android:id="@+id/convoqueretudiant8"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -797,30 +780,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant9"
+                            <TextView
+                                android:id="@+id/convoqueretudiant9"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant9"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -870,30 +839,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant10"
+                            <TextView
+                                android:id="@+id/convoqueretudiant10"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -943,30 +898,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant11"
+                            <TextView
+                                android:id="@+id/convoqueretudiant11"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -1016,30 +957,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant12"
+                            <TextView
+                                android:id="@+id/convoqueretudiant12"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -1089,30 +1016,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant13"
+                            <TextView
+                                android:id="@+id/convoqueretudiant13"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant13"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -1162,29 +1075,15 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant14"
+                            <TextView
+                                android:id="@+id/convoqueretudiant14"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"                                android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -1234,30 +1133,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant15"
+                            <TextView
+                                android:id="@+id/convoqueretudiant15"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant15"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 
@@ -1307,30 +1192,16 @@
                                 app:layout_constraintVertical_bias="0.158" />
 
 
-                            <EditText
-                                android:id="@+id/avertissementetudiant16"
+                            <TextView
+                                android:id="@+id/convoqueretudiant16"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
-                                android:hint="remarque"
+                                android:hint="convoquer"
                                 android:minHeight="48dp"
                                 android:textSize="23sp"
                                 android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/buttonetudiant16"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="330dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btnstule"
-                                android:text="send"
-                                android:textSize="21sp"
-                                android:textStyle="bold"
-
-
-                                />
                         </LinearLayout>
 
 

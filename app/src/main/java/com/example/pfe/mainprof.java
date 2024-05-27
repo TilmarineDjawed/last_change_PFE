@@ -118,9 +118,7 @@ public class mainprof extends AppCompatActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_profil) {
-            Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.message) {
+         if (id == R.id.message) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("mailto:"));
             intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"example@gmail.com"}); // optional, if you want to prefill the recipient

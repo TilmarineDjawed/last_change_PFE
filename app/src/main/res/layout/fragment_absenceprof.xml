@@ -16,13 +16,107 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profilcardparent"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_margin="6dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:elevation="12dp"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@android:color/transparent"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.7">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/profilimg"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/teacher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nomtxt"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="left"
+                android:text="Nom: benkadour"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/profilimg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.158" />
+
+            <TextView
+                android:id="@+id/prenomtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="left"
+                android:text="prenom : ali"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/profilimg"
+                app:layout_constraintTop_toBottomOf="@+id/nomtxt"
+                app:layout_constraintVertical_bias="0.10" />
+
+            <TextView
+                android:id="@+id/niveautxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="left"
+                android:text="matière : MATH"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/profilimg"
+                app:layout_constraintTop_toBottomOf="@+id/prenomtxt"
+                app:layout_constraintVertical_bias="0.2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="264dp"
         android:layout_height="60dp"
         android:gravity="center"
-        android:text="absence retard"
+        android:text="Absence Retard"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,8 +150,7 @@
             android:id="@+id/btnlayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button2"
@@ -68,7 +161,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/btnstule"
-                android:text="classe 1"
+                android:text="Classe 1"
                 android:textColor="#1261A0"
                 android:textStyle="bold" />
 
@@ -80,7 +173,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/btnstule"
-                android:text="classe 2"
+                android:text="Classe 2"
                 android:textColor="#1261A0"
                 android:textStyle="bold" />
 
@@ -91,7 +184,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/btnstule"
-                android:text="classe 3"
+                android:text="Classe 3"
                 android:textColor="#1261A0"
                 android:textStyle="bold" />
 
@@ -102,7 +195,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/btnstule"
-                android:text="classe 4"
+                android:text="Classe 4"
                 android:textColor="#1261A0"
                 android:textStyle="bold" />
 
@@ -113,7 +206,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/btnstule"
-                android:text="classe 5"
+                android:text="Classe 5"
                 android:textColor="#1261A0"
                 android:textStyle="bold" />
 
@@ -124,7 +217,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/btnstule"
-                android:text="classe 6"
+                android:text="Classe 6"
                 android:textColor="#1261A0"
                 android:textStyle="bold" />
 
@@ -138,16 +231,13 @@
         android:layout_gravity="left"
         android:layout_marginBottom="10dp"
         android:background="@drawable/btnstule"
-        android:text="send"
+        android:text="Send"
         android:textSize="21sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
-
-
-        />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView3"
@@ -158,1395 +248,152 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/sendbutton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        >
-        <androidx.cardview.widget.CardView
-            android:id="@+id/contributeCard3"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="6dp"
-            android:clickable="true"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.144"
-            android:elevation="12dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="8dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            >
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <!-- Student 1 -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
 
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Etudiant 1"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                <LinearLayout
-                    android:id="@+id/mainlayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0">
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:id="@+id/layout2"
+                    <RadioButton
+                        android:id="@+id/presense1"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:gravity="left"
-                        android:orientation="vertical"
-                        android:weightSum="5"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:layout_height="wrap_content"
+                        android:text="Présence"
+                        android:buttonTint="#1261A0"
+                        android:gravity="center" />
 
-
-                        <TextView
-                            android:id="@+id/etudianttxt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="6dp"
-                            android:gravity="left"
-                            android:text="etudiant"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant1txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant1"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant2txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant2"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant3txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 3"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant4txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 4"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant5txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 5"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant6txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 6"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant7txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant7"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-
-                        <TextView
-                            android:id="@+id/etudiant8txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 8"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant9txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant9"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant10txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant10"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant11txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 11"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant12txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 12"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant13txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 13"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant14txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 14"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant15txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant15"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-
-                        <TextView
-                            android:id="@+id/etudiant16txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 16"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant17txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 17"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant18txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 18"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant19txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 19"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant20txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 20"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant21txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 21"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant22txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 22"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant23txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 23"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-
-                        <TextView
-                            android:id="@+id/etudiant24txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 24"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant25txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-
-                            android:text="etudiant25"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant26txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 26"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant27txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 27"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant28txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 28"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant29txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 29"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant30txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 30"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/etudiant31txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 31"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-
-                        <TextView
-                            android:id="@+id/etudiant32txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="etudiant 32"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/layout3"
+                    <RadioButton
+                        android:id="@+id/retard1"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:gravity="left"
-                        android:orientation="vertical"
-                        android:weightSum="5"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:layout_height="wrap_content"
+                        android:text="Retard"
+                        android:buttonTint="#1261A0"
+                        android:gravity="center" />
 
-
-                        <TextView
-                            android:id="@+id/presenttxt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="6dp"
-                            android:gravity="left"
-                            android:text="presense"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <RadioGroup
-                            android:id="@+id/radioGroup"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <RadioButton
-                                android:id="@+id/presense1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense9"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense13"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense15"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-
-                            <RadioButton
-                                android:id="@+id/presense16"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense17"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense18"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense19"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense20"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense21"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense22"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense23"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense24"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense25"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense26"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense27"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense28"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense29"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense30"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense31"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/presense32"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginBottom="-80dp"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-
-                        </RadioGroup>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/layout4"
+                    <RadioButton
+                        android:id="@+id/absence1"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:gravity="left"
-                        android:orientation="vertical"
-                        android:weightSum="5"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:layout_height="wrap_content"
+                        android:text="Absence"
+                        android:buttonTint="#1261A0"
+                        android:gravity="center" />
+                </RadioGroup>
+            </LinearLayout>
 
+            <!-- Student 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
 
-                        <TextView
-                            android:id="@+id/retardtxt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="6dp"
-                            android:gravity="left"
-                            android:text="retard"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Etudiant 2"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                        <RadioGroup
-                            android:id="@+id/radioGroup2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <RadioButton
-                                android:id="@+id/retard1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard9"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard13"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard15"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-
-                            <RadioButton
-                                android:id="@+id/retard16"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard17"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard18"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard19"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard20"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard21"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard22"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard23"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard24"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard25"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard26"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard27"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard28"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard29"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard30"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard31"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/retard32"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginBottom="-80dp"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-
-                        </RadioGroup>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/layout5"
+                    <RadioButton
+                        android:id="@+id/presense2"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:gravity="left"
-                        android:orientation="vertical"
-                        android:weightSum="5"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:layout_height="wrap_content"
+                        android:text="Présence"
+                        android:buttonTint="#1261A0"
+                        android:gravity="center" />
 
+                    <RadioButton
+                        android:id="@+id/retard2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Retard"
+                        android:buttonTint="#1261A0"
+                        android:gravity="center" />
 
-                        <TextView
-                            android:id="@+id/absencetxt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="6dp"
-                            android:gravity="left"
-                            android:text="absence"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/absence2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Absence"
+                        android:buttonTint="#1261A0"
+                        android:gravity="center" />
+                </RadioGroup>
+            </LinearLayout>
 
-                        <RadioGroup
-                            android:id="@+id/radioGroup3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
+            <!-- Student 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
 
-                            android:gravity="center"
-                            android:orientation="vertical">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Etudiant 3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                            <RadioButton
-                                android:id="@+id/absence1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                            <RadioButton
-                                android:id="@+id/absence2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
+                    <RadioButton
+                        android:id="@+id/presense3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Présence"
+                        android:buttonTint="#1261A0"
+                        android:gravity="center" />
 
-                            <RadioButton
-                                android:id="@+id/absence3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
+                    <RadioButton
+                        android:id="@+id/retard3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Retard"
+                        android:buttonTint="#1261A0"
+                        android:gravity="center" />
 
-                            <RadioButton
-                                android:id="@+id/absence4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
+                    <RadioButton
+                        android:id="@+id/absence3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Absence"
+                        android:buttonTint="#1261A0"
+                        android:gravity="center" />
+                </RadioGroup>
+            </LinearLayout>
 
-                            <RadioButton
-                                android:id="@+id/absence5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence9"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence13"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence15"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-
-                            <RadioButton
-                                android:id="@+id/absence16"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence17"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence18"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence19"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence20"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence21"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence22"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence23"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence24"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence25"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence26"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence27"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence28"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence29"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence30"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence31"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/absence32"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginBottom="-80dp"
-                                android:buttonTint="#1261A0"
-                                android:gravity="center" />
-
-
-                        </RadioGroup>
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
